@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prasad Sarnobat | WordPress Developer</title>
+<meta name="description" content="WordPress developer in Kolhapur, India with 2 years and 11 months of hands-on experience on live projects. I build fast, responsive WordPress websites with Elementor, WPBakery, DIVI, Gutenberg, ACF and custom PHP.">
+<meta name="theme-color" content="#f5f7fc">
+<meta property="og:title" content="Prasad Sarnobat | WordPress Developer">
+<meta property="og:description" content="2 years and 11 months of hands-on experience building responsive, fast and easy-to-manage WordPress websites.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Prasad Sarnobat","jobTitle":"WordPress Developer","email":"psarnobat0@gmail.com","telephone":"+918007322924","address":{"@type":"PostalAddress","addressLocality":"Kolhapur","addressRegion":"Maharashtra","addressCountry":"IN"},"sameAs":["https://linkedin.com/in/prasad-sarnobat"],"knowsAbout":["WordPress","Elementor","WPBakery","DIVI","Gutenberg","Advanced Custom Fields","PHP","Theme customization","Plugin customization","Figma to WordPress","Core Web Vitals","SEO"]}
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f7fc;--surface:#ffffff;--surface2:#edf1f9;--line:#e0e6f1;--shadow:0 1px 2px rgba(23,32,51,.04),0 8px 24px rgba(23,32,51,.05);
+  --text:#172033;--muted:#5a667b;--accent:#4f5fe0;--accent-ink:#ffffff;
+  --wp:#0b82b4;--sh:#3a8a2a;--rc:#0b8fb0;--bs:#c0650e;--oth:#8a4fd0;--wx:#d23f7c;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+section{padding:88px 0;position:relative}
+.sec-head{margin-bottom:36px;max-width:620px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);font-weight:800}
+.sec-head p{color:var(--muted);margin:12px 0 0}
+main{position:relative;z-index:1;overflow-x:clip}
+
+/* ambient background: three soft glows that drift slowly */
+.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.orb{position:absolute;border-radius:50%;will-change:transform}
+.orb.a{width:620px;height:620px;top:-220px;right:-180px;background:radial-gradient(circle,rgba(99,115,240,.14),transparent 65%);animation:drift 26s ease-in-out infinite alternate}
+.orb.b{width:520px;height:520px;bottom:-200px;left:-160px;background:radial-gradient(circle,rgba(60,170,225,.12),transparent 65%);animation:drift 32s ease-in-out infinite alternate-reverse}
+.orb.c{width:380px;height:380px;top:46%;left:52%;background:radial-gradient(circle,rgba(170,120,230,.09),transparent 65%);animation:drift 38s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(-60px,50px,0) scale(1.08)}}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(245,247,252,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700}
+.mono{width:34px;height:34px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:800;font-size:14px;overflow:hidden;flex-shrink:0;position:relative}
+.mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.links{display:flex;gap:26px;font-size:15px;color:var(--muted)}
+.links a{transition:color .2s}
+.links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.menu{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;place-items:center}
+.menu span,.menu span::before,.menu span::after{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .25s,opacity .25s}
+.menu span::before,.menu span::after{content:"";position:absolute;left:0}
+.menu span::before{top:-6px}.menu span::after{top:6px}
+.menu[aria-expanded="true"] span{background:transparent}
+.menu[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font-family:var(--body);transition:border-color .2s,background .2s,transform .2s}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.primary:hover{background:#3f4ed0}
+
+/* hero */
+.hero{padding:80px 0 72px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;position:relative}
+.role{color:var(--accent);font-weight:600;margin:0 0 18px}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800}
+.hero .lead{color:var(--muted);font-size:18px;max-width:560px;margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.card-id{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;animation:bob 7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.avatar{position:relative;width:100%;aspect-ratio:1/1;max-height:400px;border-radius:24px;background:linear-gradient(135deg,#6f7df0,#4f5fe0);margin-bottom:18px;overflow:hidden;display:grid;place-items:center;font:800 64px var(--display);color:var(--accent-ink)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.card-id h3{font-size:22px}
+.card-id p{margin:4px 0 18px;color:var(--muted);font-size:15px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(58,138,42,.1);color:var(--sh)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sh);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,138,42,.45)}70%,100%{box-shadow:0 0 0 9px rgba(58,138,42,0)}}
+
+/* floating code symbols around the hero */
+.float{position:absolute;pointer-events:none;font:700 15px var(--display);color:var(--accent);background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:8px 12px;opacity:.9;animation:floaty 7s ease-in-out infinite alternate}
+.float.f1{top:2%;right:34%;--c:var(--accent)}
+.float.f2{bottom:6%;right:-2%;color:var(--sh);animation-delay:-2s;animation-duration:8s}
+.float.f3{top:46%;right:36%;color:var(--wp);animation-delay:-4s;animation-duration:9s}
+.float.f4{top:-2%;right:2%;color:var(--rc);animation-delay:-1s;animation-duration:6.5s}
+@keyframes floaty{to{transform:translate3d(8px,-16px,0) rotate(3deg)}}
+
+/* one hero entrance on page load */
+.hero>div>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero>div>*:nth-child(2){animation-delay:.08s}.hero>div>*:nth-child(3){animation-delay:.16s}.hero>div>*:nth-child(4){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+
+.stats{box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden}
+.stat{padding:26px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:800 36px var(--display);letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:14px}
+
+/* core technologies */
+.plat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pl{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;border-top:3px solid var(--c);transition:transform .25s,border-color .25s}
+.pl:hover{transform:translateY(-3px)}
+.pl h3{font-size:19px;margin-bottom:8px}
+.pl p{margin:0;color:var(--muted);font-size:15px}
+
+/* filters + cards */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip-btn{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 14px var(--body);cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.chip-btn:hover{border-color:var(--accent);color:var(--text)}
+.chip-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s}
+.work:hover{border-color:var(--c);transform:translateY(-2px)}
+.work[hidden],.proj[hidden]{display:none}
+.tag-p{font-size:13px;font-weight:600;color:var(--c)}
+.work h3{font-size:19px}
+.work p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span,.skill span{font-size:13px;padding:4px 11px;border-radius:999px;background:var(--surface2);color:#3b4660}
+.wp{--c:var(--wp)}.sh{--c:var(--sh)}.rc{--c:var(--rc)}.bs{--c:var(--bs)}.wf{--c:var(--oth)}.wx{--c:var(--wx)}
+.proj{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
+.proj:hover{border-color:var(--c);transform:translateY(-3px)}
+.proj h3{font-size:19px}
+.proj small{color:var(--muted);font-size:14px;margin-top:-6px}
+.proj p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.visit{font-weight:600;font-size:14px;color:var(--c)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.skill h3{font-size:17px;margin-bottom:14px;color:var(--c,var(--text))}
+.skill div{display:flex;flex-wrap:wrap;gap:8px}
+
+/* experience */
+.role-card{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;grid-template-columns:200px 1fr;gap:36px}
+.when{color:var(--accent);font-weight:600}
+.when small{display:block;color:var(--muted);font-weight:400;font-size:14px;margin-top:4px}
+.role-card h3{font-size:24px}
+.role-card .co{color:var(--muted);margin:6px 0 20px}
+.role-card ul{margin:0;padding-left:20px;display:grid;gap:10px;color:#34405a}
+.role-card li::marker{color:var(--accent)}
+
+/* highlights + education */
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl div{border-left:2px solid var(--accent);padding:4px 0 4px 18px}
+.hl b{display:block;font-family:var(--display);font-size:18px;margin-bottom:4px}
+.hl span{color:var(--muted);font-size:15px}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:56px}
+.edu div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.edu b{font-family:var(--display);font-size:18px;display:block}
+.edu span{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{box-shadow:var(--shadow);background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:56px;text-align:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:420px;height:420px;top:-220px;left:50%;margin-left:-210px;background:radial-gradient(circle,rgba(99,115,240,.12),transparent 65%);animation:drift 20s ease-in-out infinite alternate}
+.contact>*{position:relative}
+.contact h2{font-size:clamp(30px,5vw,48px);font-weight:800}
+.contact>p{color:var(--muted);max-width:520px;margin:16px auto 28px}
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;text-align:left}
+.info div{border-top:1px solid var(--line);padding-top:14px;font-size:15px;overflow-wrap:anywhere}
+.info small{display:block;color:var(--muted);margin-bottom:2px}
+.info a:hover{color:var(--accent)}
+footer{position:relative;z-index:1;padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+
+/* decorative shapes near section corners and page edges */
+#platforms::after,#skills::after,#highlights::after{content:"";position:absolute;pointer-events:none;width:150px;height:150px;border-radius:50%;border:1px dashed rgba(79,95,224,.3);animation:spin 50s linear infinite}
+#platforms::after{top:36px;right:-74px}
+#skills::after{top:48px;right:-74px;border-color:rgba(11,130,180,.3)}
+#highlights::after{top:30px;right:-74px;border-color:rgba(138,79,208,.3)}
+#wordpress::after,#projects::after,#work::after,#experience::after{content:"";position:absolute;pointer-events:none;width:92px;height:92px;left:-30px;top:40px;background-image:radial-gradient(rgba(79,95,224,.35) 1.5px,transparent 1.6px);background-size:18px 18px;animation:sway 9s ease-in-out infinite alternate}
+#wordpress::after{background-image:radial-gradient(rgba(11,130,180,.32) 1.5px,transparent 1.6px)}
+#work::after{background-image:radial-gradient(rgba(79,95,224,.35) 1.5px,transparent 1.6px)}
+#experience::after{background-image:radial-gradient(rgba(11,130,180,.32) 1.5px,transparent 1.6px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sway{to{transform:translate3d(14px,18px,0)}}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-top:48px}
+  .float{display:none}
+  .plat,.grid,.hl{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .info{grid-template-columns:repeat(2,1fr)}
+  .role-card{grid-template-columns:1fr;gap:12px}
+  .menu{display:grid}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+  .links.open{display:flex}
+  .links a{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .links a:last-child{border-bottom:0}
+}
+@media(max-width:600px){
+  section{padding:64px 0}
+  .plat,.grid,.hl,.skills,.edu{grid-template-columns:1fr}
+  .contact{padding:36px 22px}
+  .role-card{padding:24px}
+  .nav-right .btn{padding:9px 16px}
+  .card-id{animation:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span></div>
+
+<nav><div class="wrap nav">
+  <a class="brand" href="#top">
+    <span class="mono">PS<img src="profile-image.jpeg" alt="" onerror="this.remove()"></span>
+    Prasad Sarnobat
+  </a>
+  <div class="links" id="site-links"><a href="#platforms">Expertise</a><a href="#wordpress">WordPress work</a><a href="#projects">Projects</a><a href="#work">Services</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+  <div class="nav-right">
+    <a class="btn primary" href="mailto:psarnobat0@gmail.com">Email me</a>
+    <button class="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-links"><span></span></button>
+  </div>
+</div></nav>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <p class="role">WordPress Developer in Kolhapur, India</p>
+      <h1>WordPress websites that are fast, flexible and easy to manage.</h1>
+      <p class="lead">I have 2 years and 11 months of hands-on experience on live client projects. I build responsive WordPress sites with Elementor, WPBakery, DIVI, Gutenberg and ACF, turn Figma designs into clean pages, and tune speed and SEO so sites work well for real visitors.</p>
+      <div class="cta"><a class="btn primary" href="#wordpress">View WordPress work</a><a class="btn" href="mailto:psarnobat0@gmail.com">Start a project</a></div>
+    </div>
+    <aside class="card-id">
+      <span class="float f1" aria-hidden="true">&lt;/&gt;</span>
+      <span class="float f4" aria-hidden="true">PHP</span>
+      <span class="float f3" aria-hidden="true">WP</span>
+      <span class="float f2" aria-hidden="true">{ }</span>
+      <div class="avatar">PS<img src="profile-image.jpeg" alt="Prasad Sarnobat" onerror="this.remove()"></div>
+      <h3>Prasad Anil Sarnobat</h3>
+      <p>WordPress Developer</p>
+      <span class="status">Available for immediate joining</span>
+    </aside>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>2y 11m</b><span>Hands-on experience</span></div>
+    <div class="stat"><b>7</b><span>Live WordPress sites featured</span></div>
+    <div class="stat"><b>4</b><span>Builders: Elementor, WPBakery, DIVI, Gutenberg</span></div>
+    <div class="stat"><b>PHP</b><span>Custom themes, plugins and ACF fields</span></div>
+  </div>
+
+  <section id="platforms">
+    <div class="sec-head"><h2>WordPress expertise</h2><p>What I bring to a WordPress team, from page building to custom code and performance.</p></div>
+    <div class="plat">
+      <div class="pl" style="--c:var(--wp)"><h3>Page-builder sites</h3><p>Pixel-accurate layouts in Elementor, WPBakery and DIVI that clients can edit on their own.</p></div>
+      <div class="pl" style="--c:var(--accent)"><h3>Gutenberg and ACF</h3><p>Block-based pages and custom fields so content stays structured and simple to update.</p></div>
+      <div class="pl" style="--c:var(--oth)"><h3>Themes and plugins</h3><p>PHP customization of existing themes and plugins to match brand and business needs.</p></div>
+      <div class="pl" style="--c:var(--bs)"><h3>Speed and SEO</h3><p>Core Web Vitals, caching, image handling and on-page SEO checked on every build.</p></div>
+    </div>
+  </section>
+
+  <section id="wordpress">
+    <div class="sec-head"><h2>WordPress work</h2><p>Live WordPress websites across healthcare, ERP consulting, entertainment, local services, SaaS and more. Each card opens the real site.</p></div>
+    <div class="grid">
+      <a class="proj wp" href="https://www.janitvaivf.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress, Elementor</span><h3>Janitva IVF Centre</h3><small>janitvaivf.com</small><p>Multi-centre fertility clinic site for Guwahati, with treatment pages, appointment booking, patient portal login, success stories, FAQ and a blog.</p><div class="tags"><span>Elementor</span><span>Appointment flow</span><span>Blog</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://cooperplayshk.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress, Elementor</span><h3>Cooper Plays HK</h3><small>cooperplayshk.com</small><p>Review-style directory of indoor playrooms across Hong Kong, with location categories, feature tags and featured review cards.</p><div class="tags"><span>Elementor</span><span>Categories and tags</span><span>Reviews</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://ethosbusinesssolutions.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress, Elementor</span><h3>Ethos Business Solutions</h3><small>ethosbusinesssolutions.com</small><p>Corporate site for a NetSuite and Odoo ERP consultancy, with service pages, a logo marquee, industry sections, blog insights and consultation booking.</p><div class="tags"><span>Elementor</span><span>Service pages</span><span>Blog</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://ytals.com.au/" target="_blank" rel="noopener"><span class="tag-p">Business website</span><h3>ytals</h3><small>ytals.com.au</small><p>Product and pricing site for a senior safety watch in Australia, with plan comparison, Stripe buy buttons, aged-care pages and app download links.</p><div class="tags"><span>Pricing plans</span><span>Stripe checkout links</span><span>Responsive</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://imaginarium360.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress</span><h3>Imaginarium</h3><small>imaginarium360.com</small><p>Ticketing-led site for an immersive light-show experience, with location pages, a filterable photo and video gallery, press room and group sales.</p><div class="tags"><span>Gallery</span><span>Ticketing links</span><span>Performance</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://jimmys-air.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress, Elementor</span><h3>Jimmy’s AC &amp; Refrigeration</h3><small>jimmys-air.com</small><p>Local service site for a Florida HVAC company, with hero sliders, service pages, testimonials, FAQ accordion and click-to-call buttons.</p><div class="tags"><span>Elementor</span><span>Local business</span><span>FAQ</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj wp" href="https://elotree.com/" target="_blank" rel="noopener"><span class="tag-p">WordPress, Elementor</span><h3>Elotree</h3><small>elotree.com</small><p>Marketing site for an agency-management platform, with product and use-case pages, pricing, a demo-booking popup and an embedded product walkthrough.</p><div class="tags"><span>Elementor</span><span>SaaS marketing</span><span>Popups</span></div><span class="visit">Visit live site ↗</span></a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Shopify projects</h2><p>Alongside WordPress, I have also worked on Shopify stores. Each card opens a real, live store.</p></div>
+    <div class="grid">
+      <a class="proj sh" href="https://www.chantyfahrrad.de/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>Chanty Fahrrad</h3><small>chantyfahrrad.de</small><p>German-language store for a Danish family bike brand, with age and height based navigation, a sizing guide, promo banner and verified reviews.</p><div class="tags"><span>Liquid</span><span>Size guide</span><span>Multi-language</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://sillysours.com/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>Silly Sours</h3><small>sillysours.com</small><p>Single-product landing store for organic sour gummies, with quantity bundles, customer reviews, comparison table and FAQ.</p><div class="tags"><span>Bundles</span><span>Reviews</span><span>Landing page</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://kadobox.co.uk" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>KadoBox</h3><small>kadobox.co.uk</small><p>UK novelty gift store with joke-pill collections, Secret Santa range, review carousel and free-delivery messaging.</p><div class="tags"><span>Collections</span><span>Reviews</span><span>Gifting</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://www.ezyrack.com/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>EzyRack</h3><small>ezyrack.com</small><p>Modular garage storage store with AU and US markets, product systems, best-seller grid and downloadable instruction PDFs and videos.</p><div class="tags"><span>Multi-market</span><span>Video</span><span>Instructions</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://kitchenkartt.com/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>KitchenKartt</h3><small>kitchenkartt.com</small><p>Cookware store selling in eight regions, with a video hero, category tiles, sale badges, before and after slider and comparison table.</p><div class="tags"><span>Multi-currency</span><span>Comparison table</span><span>Sale badges</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://kasha-9118.myshopify.com/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>Kasha Designs</h3><small>kashadesigns.com</small><p>Indian women’s fashion label with editorial banners, signature-style carousels, collection tiles and a tailoring and personal-shopping strip.</p><div class="tags"><span>Fashion</span><span>Carousels</span><span>Instagram feed</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://rhodia.com.au/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>Rhodia Australia</h3><small>rhodia.com.au</small><p>Official stationery store with a mega menu, hero slider, bestseller carousel, collection pages, product selection guides and a stockist finder.</p><div class="tags"><span>Mega menu</span><span>Carousel</span><span>Guides</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://italica.com/" target="_blank" rel="noopener"><span class="tag-p">Shopify</span><h3>Italica</h3><small>italica.com</small><p>Large furniture catalogue with deep category menus, image slider, new-arrival and best-seller rows, warranty badges, blog and store locator.</p><div class="tags"><span>Large catalogue</span><span>Mega menu</span><span>Blog</span></div><span class="visit">Visit live site ↗</span></a>
+      <a class="proj sh" href="https://italica.com/pages/sunlounger" target="_blank" rel="noopener"><span class="tag-p">Shopify, landing page</span><h3>Italica Sunlounger</h3><small>italica.com/pages/sunlounger</small><p>Dedicated product landing page for the Sunlounger 8106, with a spec table, use-case gallery, videos, FAQ and enquiry callback form.</p><div class="tags"><span>Landing page</span><span>Lead form</span><span>Video</span></div><span class="visit">Visit live site ↗</span></a>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head"><h2>What I deliver</h2><p>The WordPress work I can take on from day one.</p></div>
+    <div class="grid">
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Page-builder websites</h3><p>Flexible sites built with Elementor, WPBakery and DIVI, so clients can manage their own content.</p><div class="tags"><span>Elementor</span><span>WPBakery</span><span>DIVI</span></div></article>
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Gutenberg and ACF</h3><p>Block-based layouts and Advanced Custom Fields for structured, reusable and easy-to-edit content.</p><div class="tags"><span>Gutenberg</span><span>ACF</span></div></article>
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Figma to WordPress</h3><p>Designs converted into responsive, cross-browser websites with a focus on mobile performance and user experience.</p><div class="tags"><span>Figma</span><span>Responsive</span></div></article>
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Theme and plugin customization</h3><p>Existing themes and plugins adjusted to match client branding, plus custom PHP, hooks and template changes.</p><div class="tags"><span>PHP</span><span>Hooks</span><span>Templates</span></div></article>
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Integrations and forms</h3><p>Booking calendars, payment links, custom forms, popups and third-party tools connected through plugins and REST APIs.</p><div class="tags"><span>REST APIs</span><span>Forms</span><span>Stripe</span></div></article>
+      <article class="work wp"><span class="tag-p">WordPress</span><h3>Speed, SEO and upkeep</h3><p>Optimization for page speed, SEO and Core Web Vitals, along with regular bug fixes, updates and content changes.</p><div class="tags"><span>Core Web Vitals</span><span>SEO</span><span>Maintenance</span></div></article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill" style="--c:var(--wp)"><h3>WordPress</h3><div><span>Elementor</span><span>WPBakery</span><span>DIVI Builder</span><span>Gutenberg</span><span>ACF</span><span>Theme customization</span><span>Plugin customization</span><span>Custom post types</span></div></div>
+      <div class="skill" style="--c:var(--accent)"><h3>Frontend</h3><div><span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span><span>jQuery</span><span>Bootstrap</span><span>Responsive design</span><span>Cross-browser compatibility</span></div></div>
+      <div class="skill" style="--c:var(--bs)"><h3>PHP and database</h3><div><span>PHP</span><span>MySQL</span><span>SQL</span><span>WordPress hooks</span><span>Template hierarchy</span></div></div>
+      <div class="skill" style="--c:var(--rc)"><h3>Performance and SEO</h3><div><span>Core Web Vitals</span><span>Page speed</span><span>Caching</span><span>Image optimization</span><span>On-page SEO</span></div></div>
+      <div class="skill" style="--c:var(--oth)"><h3>Integrations</h3><div><span>REST APIs</span><span>Webhooks</span><span>Stripe</span><span>Zapier</span><span>Make (Integromat)</span><span>Booking calendars</span><span>Custom forms</span></div></div>
+      <div class="skill"><h3>Tools and workflow</h3><div><span>Git</span><span>Figma</span><span>Agile/Scrum</span><span>Client communication</span><span>Team leadership</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="role-card">
+      <div class="when">January 2024 to present<small>2 years and 11 months on live projects</small></div>
+      <div>
+        <h3>WordPress Developer</h3>
+        <p class="co">Walster Technologies Pvt. Ltd., Kolhapur</p>
+        <ul>
+          <li>Build and customize WordPress websites using Elementor, WPBakery, DIVI, Gutenberg and ACF.</li>
+          <li>Convert Figma designs into responsive, cross-browser WordPress pages.</li>
+          <li>Customize themes and plugins with PHP to match client branding and business needs.</li>
+          <li>Improve page speed, SEO and Core Web Vitals to help sites load faster and rank better.</li>
+          <li>Integrate booking calendars, payment tools, custom forms, third-party apps and APIs.</li>
+          <li>Maintain live sites with bug fixes, updates and content changes.</li>
+          <li>Work directly with clients to gather requirements and deliver updates on time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="highlights">
+    <div class="sec-head"><h2>Key highlights</h2></div>
+    <div class="hl">
+      <div><b>Live project experience</b><span>2 years and 11 months of hands-on work on real client websites.</span></div>
+      <div><b>Page-builder fluency</b><span>Elementor, WPBakery, DIVI and Gutenberg, with ACF for custom content.</span></div>
+      <div><b>Figma to WordPress</b><span>Design conversion into clean, responsive WordPress pages.</span></div>
+      <div><b>Performance focus</b><span>Page speed, SEO and Core Web Vitals checked on every build.</span></div>
+      <div><b>Client communication</b><span>Requirement gathering and client-facing work in Agile/Scrum teams.</span></div>
+      <div><b>Ready to start</b><span>Available for immediate joining.</span></div>
+    </div>
+    <div class="edu">
+      <div><b>M.Sc. Computer Science</b><span>Shivaji University, Kolhapur, 2021 to 2023, 77%</span></div>
+      <div><b>B.Sc. Computer Science</b><span>Dr. Ghali College, Gadhinglaj, 2021, 64.32%</span></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's build your next WordPress site.</h2>
+      <p>Need a new WordPress website, a redesign or help with an existing one? Tell me what you need and I will get back to you.</p>
+      <a class="btn primary" href="mailto:psarnobat0@gmail.com">psarnobat0@gmail.com</a>
+      <div class="info">
+        <div><small>Phone</small><a href="tel:+918007322924">+91 80073 22924</a></div>
+        <div><small>Location</small>Kolhapur, Maharashtra, India</div>
+        <div><small>LinkedIn</small><a href="https://linkedin.com/in/prasad-sarnobat" target="_blank" rel="noopener">prasad-sarnobat</a></div>
+        <div><small>Languages</small>English, Hindi, Marathi</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Prasad Sarnobat, WordPress Developer.</footer>
+
+<script>
+/* project and service filters */
+document.querySelectorAll('.chip-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=b.dataset.f;
+    b.parentNode.querySelectorAll('.chip-btn').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    document.querySelectorAll(b.parentNode.dataset.t||'.work').forEach(function(c){c.hidden=!(f==='all'||c.dataset.p===f)});
+  });
+});
+/* mobile menu */
+(function(){
+  var m=document.querySelector('.menu'),l=document.getElementById('site-links');
+  function set(o){l.classList.toggle('open',o);m.setAttribute('aria-expanded',o);m.setAttribute('aria-label',o?'Close menu':'Open menu')}
+  m.addEventListener('click',function(){set(!l.classList.contains('open'))});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+</body>
+</html>
